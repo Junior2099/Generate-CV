@@ -1,0 +1,38 @@
+{
+  "name": "gerador-curriculo",
+  "version": "1.0.0",
+  "description": "Aplicativo para gerar currículos profissionais",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-builder" 
+  },
+  "author": "Antonio Silva",
+  "license": "MIT",
+  "devDependencies": {
+    "electron": "^28.0.0",
+    "electron-builder": "^24.9.0"
+  },
+  "dependencies": {
+    "jspdf": "^2.5.1"
+  },
+  "build": {
+    "appId": "com.example.geradorcurriculo",
+    "productName": "Gerador de Currículo",
+    "directories": {
+      "output": "dist"
+    },
+    "win": {
+      "target": "nsis",
+      "icon": "assets/icon.ico"
+    },
+    "mac": {
+      "target": "dmg",
+      "icon": "assets/icon.icns"
+    },
+    "linux": {
+      "target": "AppImage",
+      "icon": "assets/icon.png"
+    }
+  }
+}
